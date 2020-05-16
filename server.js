@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 var router = express.Router();
+var cors = require('cors')
+app.use(cors())
+
 
 app.use(express.static(__dirname + '/build'));
 app.get('*', function (req, res) {
