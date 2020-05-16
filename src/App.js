@@ -1,23 +1,25 @@
 import React from "react";
-import PropTypes from 'prop-types';
 
 
-function App(props) {
-
+function App() {
+  const account = window.customer;
   return (
 
     <div>
-      <h4>Account Information</h4>
-      <p><strong>Customer Name</strong> : {props.account.customerName}</p>
-      <p><strong>Customer Ban</strong> : {props.account.customerBan}</p>
-      <p><strong>Customer Email</strong> : {props.account.customerEmail}</p>
-      <p><strong>Customer Address</strong> : {props.account.customerAddress}</p>      
+
+      {account ?
+        <div>
+          <h4>Account Information</h4>
+          <p><strong>Customer Name</strong> : {account.customerName}</p>
+          <p><strong>Customer Ban</strong> : {account.customerBan}</p>
+          <p><strong>Customer Email</strong> : {account.customerEmail}</p>
+          <p><strong>Customer Address</strong> : {account.customerAddress}</p>
+        </div> : <h4>Sorry No Data Found</h4>
+      }
+
     </div>
 
   );
 }
-App.propTypes = {
-  account : PropTypes.any.isRequired
-};
 
 export default App;
