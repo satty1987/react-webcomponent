@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import reactToWebComponent from "react-to-webcomponent";
+import reactToWebComponent from "react-2-webcomponent";
 
 
 // Render React directly
